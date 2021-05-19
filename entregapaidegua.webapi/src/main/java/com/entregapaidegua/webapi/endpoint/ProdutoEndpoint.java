@@ -1,7 +1,8 @@
 package com.entregapaidegua.webapi.endpoint;
 
-import com.entregapaidegua.interfaces.service.IProdutoService;
-import com.entregapaidegua.vo.ProdutoVO;
+
+import com.entregapaidegua.domain.interfaces.service.IProdutoService;
+import com.entregapaidegua.domain.vo.ProdutoVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

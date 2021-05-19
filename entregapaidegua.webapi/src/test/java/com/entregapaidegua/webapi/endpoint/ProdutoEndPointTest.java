@@ -8,6 +8,6 @@ class ProdutoEndPointTest {
 
 	@Test
 	void contextLoads() {
+	
 	}
-
 }

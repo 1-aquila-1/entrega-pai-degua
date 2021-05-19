@@ -21,7 +21,7 @@
 	</properties>
 
 	<modules>
-		<module>entregapaidegua</module>
-		<module>entregapaidegua.webapi</module>
+		<module>EntregaPaiDegua.Domain</module>
+		<module>Entregapaidegua.WebApi</module>
 	</modules>
 </project>

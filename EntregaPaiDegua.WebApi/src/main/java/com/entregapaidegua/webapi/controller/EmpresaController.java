@@ -1,4 +1,4 @@
-package com.entregapaidegua.webapi.endpoint;
+package com.entregapaidegua.webapi.controller;
 
 import com.entregapaidegua.domain.vo.EmpresaVO;
 
@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/cadastro/empresa")
-public class EmpresaEndpoint {
+public class EmpresaController {
     
     @PostMapping
     public ResponseEntity<EmpresaVO> cadastrar(){
-        return ResponseEntity.ok(new EmpresaVO(1L, "A1"));
+        return ResponseEntity.ok(new EmpresaVO());
     }
 
     @PutMapping("{/id}")
     public ResponseEntity<EmpresaVO> editar(){
-        return ResponseEntity.ok(new EmpresaVO(1L, "A1"));
+        return ResponseEntity.ok(new EmpresaVO());
     }
 }

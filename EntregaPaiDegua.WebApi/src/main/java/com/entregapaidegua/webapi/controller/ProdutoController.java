@@ -1,4 +1,4 @@
-package com.entregapaidegua.webapi.endpoint;
+package com.entregapaidegua.webapi.controller;
 
 
 import com.entregapaidegua.domain.interfaces.service.IProdutoService;
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/produto")
-public class ProdutoEndpoint {
+public class ProdutoController {
 
     private IProdutoService produtoService;
 
     @Autowired
-    public ProdutoEndpoint(IProdutoService produtoService){
+    public ProdutoController(IProdutoService produtoService){
         this.produtoService = produtoService;
     }
 

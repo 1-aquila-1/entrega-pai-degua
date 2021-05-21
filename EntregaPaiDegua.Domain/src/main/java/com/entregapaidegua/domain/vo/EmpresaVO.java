@@ -15,6 +15,8 @@ public class EmpresaVO implements Serializable{
     
     private Long id;
     private String nome;
+    private String documentoFiscal;
+    private EnderecoVO endereco;
 
     @Override
     public int hashCode() {

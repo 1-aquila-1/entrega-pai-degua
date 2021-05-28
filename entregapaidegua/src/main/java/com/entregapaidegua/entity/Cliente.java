@@ -2,7 +2,9 @@ package com.entregapaidegua.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,8 +16,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@Table(name = "cliente")
 public class Cliente extends Entidade{
     private String nome;
+    @Column(name = "data_nascimento")
     private Date dataNascimento;
     private Integer telefone;
 

@@ -1,6 +1,8 @@
 package com.entregapaidegua.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,9 +15,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@Table(name = "empresa")
 public class Empresa extends Entidade{
 
     private String nome;
+    @Column(name="documento_fiscal")
     private String documentoFiscal;
 
     private String uf;
@@ -25,8 +29,6 @@ public class Empresa extends Entidade{
     private String rua;
     private String numero;
     private String complemento;
-
-    // private List<Produto> produtos;
     
     @Override
     public int hashCode() {

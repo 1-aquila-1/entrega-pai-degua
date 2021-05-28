@@ -1,22 +1,20 @@
-package com.entregapaidegua.domain.entity;
+package com.entregapaidegua.vo;
 
+import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@MappedSuperclass
-public abstract class Entidade {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
+public class ProdutoVO implements Serializable{
+    
+    private Long id;
+    private String nome;
 
     @Override
     public int hashCode() {
@@ -25,7 +23,6 @@ public abstract class Entidade {
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -34,7 +31,7 @@ public abstract class Entidade {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Entidade other = (Entidade) obj;
+        ProdutoVO other = (ProdutoVO) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -42,5 +39,4 @@ public abstract class Entidade {
             return false;
         return true;
     }
-
 }

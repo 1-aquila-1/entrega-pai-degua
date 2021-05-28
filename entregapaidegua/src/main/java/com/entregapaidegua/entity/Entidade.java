@@ -1,22 +1,22 @@
-package com.entregapaidegua.domain.vo;
+package com.entregapaidegua.entity;
 
-import java.io.Serializable;
-
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
 @NoArgsConstructor
 @Getter
 @Setter
-public class EmpresaVO implements Serializable{
-    
-    private Long id;
-    private String nome;
-    private String documentoFiscal;
-    private EnderecoVO endereco;
+@MappedSuperclass
+public abstract class Entidade {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Long id;
 
     @Override
     public int hashCode() {
@@ -25,6 +25,7 @@ public class EmpresaVO implements Serializable{
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -33,7 +34,7 @@ public class EmpresaVO implements Serializable{
             return false;
         if (getClass() != obj.getClass())
             return false;
-        EmpresaVO other = (EmpresaVO) obj;
+        Entidade other = (Entidade) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -41,4 +42,5 @@ public class EmpresaVO implements Serializable{
             return false;
         return true;
     }
+
 }

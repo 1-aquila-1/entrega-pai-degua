@@ -1,6 +1,6 @@
-package com.entregapaidegua.domain.interfaces.service;
+package com.entregapaidegua.interfaces.service;
 
-import com.entregapaidegua.domain.vo.ProdutoVO;
+import com.entregapaidegua.vo.ProdutoVO;
 
 import org.springframework.stereotype.Service;
 

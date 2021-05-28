@@ -1,32 +1,24 @@
-package com.entregapaidegua.domain.entity;
+package com.entregapaidegua.vo;
 
-import javax.persistence.Entity;
+import java.io.Serializable;
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
-public class Empresa extends Entidade{
+public class ClienteVO implements Serializable {
 
+    private Long id;
     private String nome;
-    private String documentoFiscal;
-
-    private String uf;
-    private String cidade;
-    private String bairro;
-    private Integer cep;
-    private String rua;
-    private String numero;
-    private String complemento;
-
-    // private List<Produto> produtos;
+    private Date dataNascimento;
+    private Integer telefone;
+    private EnderecoVO endereco;
     
     @Override
     public int hashCode() {
@@ -43,7 +35,7 @@ public class Empresa extends Entidade{
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Empresa other = (Empresa) obj;
+        ClienteVO other = (ClienteVO) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -51,5 +43,7 @@ public class Empresa extends Entidade{
             return false;
         return true;
     }
+
     
+
 }

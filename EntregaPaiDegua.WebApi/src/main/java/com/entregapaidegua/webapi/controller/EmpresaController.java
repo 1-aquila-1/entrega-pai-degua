@@ -1,6 +1,6 @@
 package com.entregapaidegua.webapi.controller;
 
-import com.entregapaidegua.domain.vo.EmpresaVO;
+import com.entregapaidegua.vo.EmpresaVO;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

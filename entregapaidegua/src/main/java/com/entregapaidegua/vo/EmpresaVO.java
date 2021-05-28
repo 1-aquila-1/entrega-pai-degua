@@ -1,7 +1,6 @@
-package com.entregapaidegua.domain.vo;
+package com.entregapaidegua.vo;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,14 +11,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ClienteVO implements Serializable {
-
+public class EmpresaVO implements Serializable{
+    
     private Long id;
     private String nome;
-    private Date dataNascimento;
-    private Integer telefone;
+    private String documentoFiscal;
     private EnderecoVO endereco;
-    
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -35,7 +33,7 @@ public class ClienteVO implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        ClienteVO other = (ClienteVO) obj;
+        EmpresaVO other = (EmpresaVO) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -43,7 +41,4 @@ public class ClienteVO implements Serializable {
             return false;
         return true;
     }
-
-    
-
 }

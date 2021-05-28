@@ -1,4 +1,4 @@
-package com.entregapaidegua.domain.entity;
+package com.entregapaidegua.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;

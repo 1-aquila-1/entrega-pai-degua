@@ -1,6 +1,4 @@
-package com.entregapaidegua.domain.entity;
-
-import java.math.BigDecimal;
+package com.entregapaidegua.entity;
 
 import javax.persistence.Entity;
 
@@ -14,8 +12,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Produto extends Entidade{
-    private String nome;
-    private BigDecimal preco;
-    private String descricao;
+public class ItemVenda extends Entidade {
+    private Produto produto;
+    private Integer quantidade;
 }

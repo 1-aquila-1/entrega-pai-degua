@@ -1,4 +1,4 @@
-package com.entregapaidegua.domain.interfaces.service;
+package com.entregapaidegua.interfaces.service;
 
 import org.springframework.data.repository.NoRepositoryBean;
 

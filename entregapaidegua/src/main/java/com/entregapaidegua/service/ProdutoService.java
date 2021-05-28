@@ -1,11 +1,11 @@
-package com.entregapaidegua.domain.service;
+package com.entregapaidegua.service;
 
 import java.util.Optional;
 
-import com.entregapaidegua.domain.entity.Produto;
-import com.entregapaidegua.domain.interfaces.repository.IProdutoRepository;
-import com.entregapaidegua.domain.interfaces.service.IProdutoService;
-import com.entregapaidegua.domain.vo.ProdutoVO;
+import com.entregapaidegua.entity.Produto;
+import com.entregapaidegua.interfaces.repository.IProdutoRepository;
+import com.entregapaidegua.interfaces.service.IProdutoService;
+import com.entregapaidegua.vo.ProdutoVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.entregapaidegua.domain.interfaces.repository;
+package com.entregapaidegua.interfaces.repository;
 
-import com.entregapaidegua.domain.entity.Produto;
+import com.entregapaidegua.entity.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

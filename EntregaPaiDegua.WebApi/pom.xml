@@ -8,7 +8,7 @@
 		<version>1.0</version>
 	</parent>
 
-	<groupId>com.entregapaidegua.webapi</groupId>
+	<groupId>com.entregapaidegua</groupId>
 	<artifactId>entrega-pai-degua-webapi</artifactId>
 	<version>1.0</version>
 
@@ -59,7 +59,7 @@
 
 		<dependency>
 			<groupId>com.entregapaidegua</groupId>
-			<artifactId>entrega-pai-degua-domain</artifactId>
+			<artifactId>entrega-pai-degua</artifactId>
 			<version>1.0</version>
 		</dependency>
 	</dependencies>

@@ -1,8 +1,6 @@
-package com.entregapaidegua.domain.entity;
+package com.entregapaidegua.vo;
 
-import java.util.Date;
-
-import javax.persistence.Entity;
+import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,12 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
-public class Cliente extends Entidade{
-    private String nome;
-    private Date dataNascimento;
-    private Integer telefone;
-
+public class EnderecoVO implements Serializable {
     private String uf;
     private String cidade;
     private String bairro;
@@ -26,5 +19,4 @@ public class Cliente extends Entidade{
     private String rua;
     private String numero;
     private String complemento;
-    
 }

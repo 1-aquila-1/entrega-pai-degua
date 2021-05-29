@@ -1,9 +1,15 @@
 package com.entregapaidegua.entity;
 
-public enum SituacaoVenda {
-    SOLICITADO,
-    AGUARDANDO_ENTREGA,
-    CONFIRMADO_CLIENTE,
-    CONFIRMADO_LOJA,
-    CONFIRMADO_CLIENTE_LOJA;
+import javax.persistence.Entity;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@Getter
+@Setter
+@Entity(name="situacao_venda")
+public class SituacaoVenda extends Entidade{
+    private String situacao;
 }

@@ -5,10 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,16 +17,22 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
-@Table(name = "venda_produto")
+@Entity(name = "venda")
 public class Venda extends Entidade{
+    
+    @Column(name="nome_cliente")
+    private String nomeCliente;
+    @Column(name="valor_total")
     private BigDecimal valorTotal;
     @Column(name = "endereco_entrega")
     private String enderecoEntrega;
-    @ManyToOne
-    private Cliente cliente;
     @Column(name="data_venda")
     private Date dataVenda;
-    @Enumerated(EnumType.STRING)
+    @ManyToOne(fetch = FetchType.EAGER)
     private SituacaoVenda situacao;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Cliente cliente;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Empresa empresa;
 }

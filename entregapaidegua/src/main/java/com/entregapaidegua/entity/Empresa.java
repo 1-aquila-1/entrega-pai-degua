@@ -2,7 +2,6 @@ package com.entregapaidegua.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,8 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
-@Table(name = "empresa")
+@Entity(name = "empresa")
 public class Empresa extends Entidade{
 
     private String nome;

@@ -1,7 +1,11 @@
 package com.entregapaidegua.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.entregapaidegua.entity.auxiliar.Endereco;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,20 +17,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name = "empresa")
+@Entity
+@Table(name = "empresa")
 public class Empresa extends Entidade{
 
     private String nome;
     @Column(name="documento_fiscal")
     private String documentoFiscal;
-
-    private String uf;
-    private String cidade;
-    private String bairro;
-    private Integer cep;
-    private String rua;
-    private String numero;
-    private String complemento;
+    @Embedded   
+    private Endereco endereco;
     
     @Override
     public int hashCode() {

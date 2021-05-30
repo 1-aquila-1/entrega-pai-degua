@@ -3,7 +3,11 @@ package com.entregapaidegua.entity;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.entregapaidegua.entity.auxiliar.Endereco;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,19 +18,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name = "cliente")
+@Entity
+@Table(name = "cliente")
 public class Cliente extends Entidade{
     private String nome;
     @Column(name = "data_nascimento")
     private Date dataNascimento;
-    private Integer telefone;
-
-    private String uf;
-    private String cidade;
-    private String bairro;
-    private Integer cep;
-    private String rua;
-    private String numero;
-    private String complemento;
-    
+    private Integer telefone; 
+    @Embedded   
+    private Endereco endereco;
 }

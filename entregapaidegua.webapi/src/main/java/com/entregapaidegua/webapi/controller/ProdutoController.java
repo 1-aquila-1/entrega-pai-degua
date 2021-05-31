@@ -4,7 +4,6 @@ package com.entregapaidegua.webapi.controller;
 import com.entregapaidegua.interfaces.service.IProdutoService;
 import com.entregapaidegua.vo.ProdutoVO;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,12 +16,11 @@ public class ProdutoController {
 
     private IProdutoService produtoService;
 
-    @Autowired
     public ProdutoController(IProdutoService produtoService){
         this.produtoService = produtoService;
     }
 
-    @PostMapping("/cadastro")
+    @PostMapping(path = "/", produces = "application/json")
     public ResponseEntity<ProdutoVO> cadastrar(){
         try{
           return ResponseEntity.ok(produtoService.obter(1L));
@@ -31,7 +29,7 @@ public class ProdutoController {
         return ResponseEntity.ok(new ProdutoVO());
     }
 
-    @PutMapping()
+    @PutMapping(path = "/", produces = "application/json")
     public String editar(){
         return "";
     }

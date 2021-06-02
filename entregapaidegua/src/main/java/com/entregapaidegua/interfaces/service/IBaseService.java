@@ -4,7 +4,7 @@ import org.springframework.data.repository.NoRepositoryBean;
 
 @NoRepositoryBean
 public interface IBaseService<T, ID> {
-    void cadastro(T o) throws Exception;
+    void cadastrar(T entity) throws Exception;
     T obter(ID id) throws Exception;
-    T editar(ID id, T o) throws Exception;
+    void editar(ID id, T entity) throws Exception;
 }

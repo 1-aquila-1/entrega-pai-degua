@@ -23,4 +23,11 @@ public class Produto extends Entidade{
     private String descricao;
     @ManyToOne
     private Empresa empresa;
+
+    public Produto atualizar(Produto obj) {
+        this.setNome(obj.getNome());
+        this.setDescricao(obj.getDescricao());
+        this.setPreco(obj.getPreco());
+        return this;
+    }
 }

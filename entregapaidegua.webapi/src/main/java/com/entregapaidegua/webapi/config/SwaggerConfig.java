@@ -1,7 +1,7 @@
 package com.entregapaidegua.webapi.config;
 
 
-import com.entregapaidegua.entity.Usuario;
+import com.entregapaidegua.security.Usuario;
 import com.entregapaidegua.webapi.controller.EmpresaController;
 
 import org.springframework.context.annotation.Bean;

@@ -23,7 +23,9 @@ public class ProdutoController {
     @PostMapping(path = "/", produces = "application/json")
     public ResponseEntity<ProdutoVO> cadastrar(){
         try{
-          return ResponseEntity.ok(produtoService.obter(1L));
+        //   return ResponseEntity.ok(produtoService.obter(1L));
+            produtoService.obter(1L);
+            return null;
         }catch(Exception e){
         }
         return ResponseEntity.ok(new ProdutoVO());

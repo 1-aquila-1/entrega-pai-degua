@@ -21,6 +21,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "cliente")
 public class Cliente extends Entidade{
+    private String cpf;
     private String nome;
     @Column(name = "data_nascimento")
     private Date dataNascimento;

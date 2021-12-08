@@ -1,36 +1,46 @@
 package com.entregapaidegua.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.entregapaidegua.entity.auxiliar.Contato;
+import com.entregapaidegua.entity.auxiliar.EmpresaDadoPessoal;
 import com.entregapaidegua.entity.auxiliar.Endereco;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @Entity
 @Table(name = "empresa")
-public class Empresa extends Entidade{
+public class Empresa extends Entidade {
 
-    private String nome;
-    @Column(name="documento_fiscal")
-    private String documentoFiscal;
-    @Embedded   
+    @Embedded
+    private EmpresaDadoPessoal dadoPessoal;
+    @Embedded
+    private Contato contato;
+    @Embedded
     private Endereco endereco;
-    
-   public Empresa atualizar(Empresa obj){
-       setNome(obj.getNome());
-       setEndereco(obj.getEndereco());
-       return this;
-   }
-    
+
+    public Empresa addEndereco(Endereco endereco) {
+        setEndereco(endereco);
+        return this;
+    }
+
+    public Empresa addDadoPessoal(EmpresaDadoPessoal dadoPessoal) {
+        dadoPessoal.setNome(dadoPessoal.getNome());
+        return this;
+    }
+
+    public Empresa addContato(Contato contato) {
+        setContato(contato);
+        return this;
+    }
+
+    public String getNome() {
+        return dadoPessoal.getNome();
+    }
+
 }
